@@ -9,9 +9,8 @@ const C = {
 export default function Venue() {
   const { venue } = weddingData;
 
-  // Exact Google Search query or coordinates
-  const mapSearchQuery = encodeURIComponent("Ashapurna Valley, Jhalamand, Jodhpur, Rajasthan 342005");
-  const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${mapSearchQuery}`;
+  // Exact Google Maps location link provided by user
+  const directionsUrl = "https://maps.app.goo.gl/TSsZfHpfaH37j4nPA?g_st=iw";
 
   return (
     <section id="venue" style={{ padding: "5rem 1.5rem", background: "#FFFFFF", textAlign: "center" }}>

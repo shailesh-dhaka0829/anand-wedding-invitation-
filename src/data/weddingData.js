@@ -8,6 +8,7 @@ export const weddingData = {
   groom: {
     firstName: "Anand",
     fullName: "Anand Dhaka",
+    name: "Anand Dhaka (RPr)",
     tag: "RPr",
     fatherName: "Vishnu Dutt Dhaka",
     motherName: "Mala Dhaka",
@@ -17,6 +18,7 @@ export const weddingData = {
   bride: {
     firstName: "Suman",
     fullName: "Suman",
+    name: "Suman (CHO)",
     tag: "CHO",
     fatherName: "",
     motherName: "",
@@ -31,9 +33,8 @@ export const weddingData = {
     address: "145, Ashapurna Valley, Jhalamand",
     city: "Jodhpur, Rajasthan",
     mapEmbedUrl:
-      "https://maps.google.com/maps?q=Ashapurna+Valley+Jhalamand+Jodhpur+Rajasthan&output=embed",
-    mapLink:
-      "https://www.google.com/maps/search/Ashapurna+Valley+Jhalamand+Jodhpur+Rajasthan",
+      "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3579.5912372242396!2d73.0522778!3d26.2099722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDEyJzM1LjkiTiA3M8KwMDMnMDguMiJF!5e0!3m2!1sen!2sin!4v1793640223670!5m2!1sen!2sin",
+    mapLink: "https://maps.app.goo.gl/TSsZfHpfaH37j4nPA?g_st=iw",
   },
 
   // ---- EVENTS / CEREMONIES ----
