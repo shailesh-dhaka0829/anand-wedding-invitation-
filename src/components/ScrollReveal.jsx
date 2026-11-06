@@ -1,0 +1,35 @@
+import { useEffect, useRef, useState } from "react";
+
+export default function ScrollReveal({ children, delay = 0, direction = "up" }) {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
+      { threshold: 0.15 }
+    );
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  const transforms = {
+    up:    visible ? "translateY(0)"   : "translateY(40px)",
+    down:  visible ? "translateY(0)"   : "translateY(-40px)",
+    left:  visible ? "translateX(0)"   : "translateX(-40px)",
+    right: visible ? "translateX(0)"   : "translateX(40px)",
+  };
+
+  return (
+    <div
+      ref={ref}
+      style={{
+        opacity: visible ? 1 : 0,
+        transform: transforms[direction],
+        transition: `opacity 0.8s ease ${delay}s, transform 0.8s ease ${delay}s`,
+      }}
+    >
+      {children}
+    </div>
+  );
+}

@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FFF9EF;
+  color: #291C1A;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Royal Palace Damask Watermark Pattern */
+.royal-cover-bg {
+  background-color: #24050A;
+  background-image: 
+    radial-gradient(circle at 50% 30%, rgba(201, 168, 76, 0.18) 0%, transparent 65%),
+    radial-gradient(circle at 50% 80%, rgba(125, 31, 46, 0.3) 0%, transparent 70%),
+    url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c9a84c' fill-opacity='0.08'%3E%3Cpath d='M40 0 C45 20 60 35 80 40 C60 45 45 60 40 80 C35 60 20 45 0 40 C20 35 35 20 40 0 Z'/%3E%3Ccircle cx='40' cy='40' r='6'/%3E%3Cpath d='M40 25 C43 33 47 37 55 40 C47 43 43 47 40 55 C37 43 33 47 25 40 C33 37 37 33 40 25 Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: auto, auto, 70px 70px;
+}
+
+/* Inside Page Celestial Sky-to-Ivory Background */
+.celestial-page-bg {
+  background: linear-gradient(180deg, #E6F0FA 0%, #F3F8FD 15%, #FFFDF9 35%, #FFF9EF 100%);
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #FFF9EF; }
+::-webkit-scrollbar-thumb { background: #7D1F2E; border-radius: 4px; }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-ivory: #F8F0E3;
+    --color-ivory-light: #FFF9EF;
+    --color-maroon: #6E1F2E;
+    --color-maroon-dark: #42131E;
+    --color-gold: #B5965A;
+    --color-gold-light: #D4AF37;
+    --color-brown: #291C1A;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-ivory-light);
+    color: var(--color-brown);
+    font-family: 'Montserrat', 'Plus Jakarta Sans', sans-serif;
+  }
+
+  body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Exact Font Utility Classes from himeshh704/rajveer-lavleen */
+.font-serif-luxury {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-italiana {
+  font-family: 'Italiana', 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-cormorant {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-great-vibes {
+  font-family: 'Great Vibes', cursive, 'Playfair Display', serif;
+}
+
+.font-alex-brush {
+  font-family: 'Alex Brush', cursive, 'Cormorant Garamond', serif;
+}
+
+.font-sans-body {
+  font-family: 'Montserrat', 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Traditional Indian Cathedral Arch Frame (Exact from repo) */
+.arch-card {
+  border-top-left-radius: 140px;
+  border-top-right-radius: 140px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.arch-card-sm {
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
