@@ -1,106 +1,85 @@
-const C = {
-  maroon: "#7D1F2E",
-  cream: "#FFF8F0",
-  pgreen: "#8FBC8F",
-  ppink: "#F4A7B9",
-  gold: "#C9A84C",
-};
-
 export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <footer
-      style={{
-        padding: "4rem 1.5rem 3rem",
-        background: "#1A060A",
-        textAlign: "center",
-        color: C.cream,
-        position: "relative",
-      }}
-    >
-      {/* Royal Gradient Divider */}
-      <div
-        style={{
-          height: "2px",
-          background: `linear-gradient(90deg, transparent, ${C.gold}, transparent)`,
-          marginBottom: "2.5rem",
-        }}
-      />
+    <footer className="relative bg-[#FFF9EF] text-[#291C1A] border-t-2 border-[#B5965A]/40 pt-16 pb-20 px-4 md:px-8 overflow-hidden text-center select-none">
+      <div className="max-w-3xl mx-auto space-y-6">
+        
+        {/* Invocation */}
+        <div className="inline-flex flex-col items-center">
+          <span className="text-2xl font-serif text-[#6E1F2E] font-bold tracking-widest mb-1">
+            ॥ श्री गणेशाय नमः ॥
+          </span>
+          <span className="text-[10px] font-cinzel font-semibold tracking-widest text-[#B5965A] uppercase">
+            Dhaka Family Celebrations
+          </span>
+        </div>
 
-      {/* Couple Name */}
-      <div
-        style={{
-          fontFamily: "'Great Vibes', cursive",
-          fontSize: "clamp(2.4rem, 5vw, 3.2rem)",
-          color: C.cream,
-          marginBottom: "0.4rem",
-        }}
-      >
-        Anand &amp; Suman
-      </div>
+        {/* Couple Heading */}
+        <h2 className="text-3xl sm:text-5xl font-serif-luxury font-bold text-[#6E1F2E]">
+          Anand weds Suman
+        </h2>
 
-      {/* Wedding Date */}
-      <div
-        style={{
-          fontFamily: "'Cinzel', serif",
-          fontSize: "0.75rem",
-          letterSpacing: "0.25em",
-          color: C.gold,
-          marginBottom: "2rem",
-        }}
-      >
-        15 · NOVEMBER · 2026 · JODHPUR
-      </div>
-
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: "1rem",
-          marginBottom: "2rem",
-        }}
-      >
-        <div style={{ width: "40px", height: "1px", background: "rgba(201,168,76,0.3)" }} />
-        <span style={{ color: C.ppink, fontSize: "1.2rem" }}>🪷</span>
-        <div style={{ width: "40px", height: "1px", background: "rgba(201,168,76,0.3)" }} />
-      </div>
-
-      {/* 💻 Developer Credit Badge */}
-      <div
-        style={{
-          display: "inline-block",
-          padding: "0.6rem 1.5rem",
-          borderRadius: "30px",
-          background: "rgba(255, 248, 240, 0.05)",
-          border: "1px solid rgba(201, 168, 76, 0.25)",
-          marginBottom: "1rem",
-        }}
-      >
-        <p
-          style={{
-            fontFamily: "'Montserrat', sans-serif",
-            fontSize: "0.75rem",
-            letterSpacing: "0.1em",
-            color: "rgba(255, 248, 240, 0.8)",
-            margin: 0,
-          }}
-        >
-          Designed &amp; Developed by{" "}
-          <span style={{ color: C.gold, fontWeight: 600 }}>Shailesh Dhaka</span>
+        <p className="text-sm font-cormorant italic text-[#291C1A]/80 max-w-md mx-auto">
+          "With gratitude in our hearts and blessings from our elders, we look forward to celebrating our special day with you."
         </p>
-      </div>
 
-      <p
-        style={{
-          fontFamily: "'Montserrat', sans-serif",
-          fontSize: "0.65rem",
-          letterSpacing: "0.15em",
-          color: "rgba(255,248,240,0.3)",
-          marginTop: "0.5rem",
-        }}
-      >
-        CELEBRATING LOVE &amp; TOGETHERNESS · 2026
-      </p>
+        {/* 🌟 MAGICAL CREATOR CARD (Exact to Screenshot 2026-11-04 000248.png) */}
+        <div className="mt-8 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-[#42131E] via-[#6E1F2E] to-[#290B13] border-2 border-[#D4AF37]/60 text-[#FFF9EF] shadow-2xl relative overflow-hidden max-w-xl mx-auto text-center">
+          
+          <div className="relative z-10 space-y-4">
+            {/* Pill */}
+            <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#D4AF37]/20 border border-[#D4AF37]/50 text-amber-200 text-[10px] sm:text-xs font-cinzel uppercase tracking-[0.2em]">
+              <span>✨</span>
+              <span>Crafted With Magic &amp; Devotion</span>
+            </div>
+
+            {/* Title */}
+            <h4 className="text-xl sm:text-2xl font-serif-luxury font-bold text-amber-100">
+              Want something magical like this for your special day?
+            </h4>
+
+            {/* Developer Name */}
+            <p className="text-xs sm:text-sm font-sans-body text-[#FFF9EF]/85 max-w-md mx-auto">
+              Designed &amp; Developed by{" "}
+              <strong className="text-amber-300 font-bold">Shailesh Dhaka</strong>
+            </p>
+
+            {/* Contact Pills */}
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
+              <a
+                href="tel:8619189005"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#D4AF37] text-[#291C1A] text-xs sm:text-sm font-bold font-sans-body shadow-lg hover:bg-amber-200 hover:scale-105 transition-all border border-[#D4AF37]"
+              >
+                <span>📞</span>
+                <span>+91 86191 89005</span>
+              </a>
+
+              <div className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-white/10 border border-[#D4AF37]/40 text-amber-200 text-xs sm:text-sm font-semibold font-sans-body">
+                <span>📍</span>
+                <span>Jodhpur, Rajasthan</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Back to Top Button */}
+        <div className="pt-4">
+          <button
+            onClick={scrollToTop}
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#6E1F2E] text-[#FFF9EF] hover:bg-[#42131E] text-xs font-sans-body font-semibold shadow-md transition-all border border-[#B5965A]/40 cursor-pointer"
+          >
+            <span>Back To Top Cover ↑</span>
+          </button>
+        </div>
+
+        <p className="text-[10px] font-sans-body tracking-widest text-[#291C1A]/40 pt-4 uppercase">
+          CELEBRATING LOVE &amp; TOGETHERNESS · 2026
+        </p>
+
+      </div>
     </footer>
   );
 }

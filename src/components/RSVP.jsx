@@ -6,8 +6,8 @@ export default function RSVP() {
   const [guests, setGuests] = useState("2");
   const [message, setMessage] = useState("");
 
-  // Target WhatsApp phone number (replace with your family's number)
-  const whatsappNumber = "919876543210"; 
+  // Target WhatsApp phone number
+  const whatsappNumber = "918619189005"; 
 
   const handleSendWhatsApp = (e) => {
     e.preventDefault();
@@ -31,122 +31,51 @@ export default function RSVP() {
   return (
     <section
       id="rsvp"
-      style={{
-        padding: "6rem 1.5rem",
-        background: "linear-gradient(180deg, #F5ECE0 0%, #FFF9EF 100%)",
-        textAlign: "center",
-      }}
+      className="py-20 px-4 bg-gradient-to-b from-[#F5ECE0] to-[#FFF9EF] text-center"
     >
-      <div style={{ maxWidth: "620px", margin: "0 auto" }}>
+      <div className="max-w-xl mx-auto">
         {/* Header */}
-        <p
-          style={{
-            fontFamily: "'Cinzel', serif",
-            fontSize: "0.8rem",
-            letterSpacing: "0.25em",
-            color: "#7D1F2E",
-            textTransform: "uppercase",
-            marginBottom: "0.5rem",
-          }}
-        >
+        <p className="font-cinzel text-xs tracking-[0.25em] text-[#7D1F2E] uppercase font-bold mb-2">
           Confirm Your Presence
         </p>
 
-        <h2
-          style={{
-            fontFamily: "'Playfair Display', serif",
-            fontSize: "clamp(2rem, 4vw, 2.8rem)",
-            color: "#7D1F2E",
-            marginBottom: "1rem",
-          }}
-        >
-          RSVP & Blessings
+        <h2 className="font-serif-luxury text-3xl sm:text-4xl font-bold text-[#7D1F2E] mb-2">
+          RSVP &amp; Blessings
         </h2>
 
-        <p
-          style={{
-            fontFamily: "'Montserrat', sans-serif",
-            fontSize: "0.88rem",
-            color: "#666",
-            marginBottom: "2.5rem",
-            lineHeight: "1.6",
-          }}
-        >
+        <p className="font-sans-body text-xs sm:text-sm text-[#666] mb-8 max-w-md mx-auto">
           Please let us know if you will be able to join us in our celebrations.
         </p>
 
         {/* Form Card */}
         <form
           onSubmit={handleSendWhatsApp}
-          style={{
-            background: "#FFFFFF",
-            border: "1px solid rgba(201, 168, 76, 0.4)",
-            borderRadius: "20px",
-            padding: "2.5rem 1.8rem",
-            boxShadow: "0 10px 30px rgba(125, 31, 46, 0.08)",
-            textAlign: "left",
-          }}
+          className="bg-white border border-[#C9A84C]/40 rounded-3xl p-6 sm:p-8 shadow-xl text-left space-y-4"
         >
           {/* Guest Name */}
-          <div style={{ marginBottom: "1.2rem" }}>
-            <label
-              style={{
-                display: "block",
-                fontFamily: "'Cinzel', serif",
-                fontSize: "0.75rem",
-                letterSpacing: "0.15em",
-                color: "#7D1F2E",
-                marginBottom: "0.4rem",
-              }}
-            >
+          <div>
+            <label className="block font-cinzel text-xs tracking-wider text-[#7D1F2E] font-bold mb-1">
               YOUR FULL NAME *
             </label>
             <input
               type="text"
               required
-              placeholder="e.g. Rahul Sharma & Family"
+              placeholder="e.g. Rahul Sharma &amp; Family"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              style={{
-                width: "100%",
-                padding: "0.8rem 1rem",
-                borderRadius: "10px",
-                border: "1px solid rgba(125, 31, 46, 0.2)",
-                fontFamily: "'Montserrat', sans-serif",
-                fontSize: "0.9rem",
-                outline: "none",
-                background: "#FFFDF9",
-              }}
+              className="w-full px-4 py-3 rounded-xl border border-[#7D1F2E]/20 font-sans-body text-sm outline-none bg-[#FFFDF9] focus:border-[#C9A84C]"
             />
           </div>
 
           {/* Attendance Selection */}
-          <div style={{ marginBottom: "1.2rem" }}>
-            <label
-              style={{
-                display: "block",
-                fontFamily: "'Cinzel', serif",
-                fontSize: "0.75rem",
-                letterSpacing: "0.15em",
-                color: "#7D1F2E",
-                marginBottom: "0.4rem",
-              }}
-            >
+          <div>
+            <label className="block font-cinzel text-xs tracking-wider text-[#7D1F2E] font-bold mb-1">
               WILL YOU ATTEND?
             </label>
             <select
               value={attending}
               onChange={(e) => setAttending(e.target.value)}
-              style={{
-                width: "100%",
-                padding: "0.8rem 1rem",
-                borderRadius: "10px",
-                border: "1px solid rgba(125, 31, 46, 0.2)",
-                fontFamily: "'Montserrat', sans-serif",
-                fontSize: "0.9rem",
-                outline: "none",
-                background: "#FFFDF9",
-              }}
+              className="w-full px-4 py-3 rounded-xl border border-[#7D1F2E]/20 font-sans-body text-sm outline-none bg-[#FFFDF9] focus:border-[#C9A84C]"
             >
               <option value="Yes, Joyfully Attending!">🎉 Yes, Joyfully Attending!</option>
               <option value="Attending with Family">👨‍👩‍👧 Attending with Family</option>
@@ -155,32 +84,14 @@ export default function RSVP() {
           </div>
 
           {/* Number of Guests */}
-          <div style={{ marginBottom: "1.2rem" }}>
-            <label
-              style={{
-                display: "block",
-                fontFamily: "'Cinzel', serif",
-                fontSize: "0.75rem",
-                letterSpacing: "0.15em",
-                color: "#7D1F2E",
-                marginBottom: "0.4rem",
-              }}
-            >
+          <div>
+            <label className="block font-cinzel text-xs tracking-wider text-[#7D1F2E] font-bold mb-1">
               NUMBER OF GUESTS
             </label>
             <select
               value={guests}
               onChange={(e) => setGuests(e.target.value)}
-              style={{
-                width: "100%",
-                padding: "0.8rem 1rem",
-                borderRadius: "10px",
-                border: "1px solid rgba(125, 31, 46, 0.2)",
-                fontFamily: "'Montserrat', sans-serif",
-                fontSize: "0.9rem",
-                outline: "none",
-                background: "#FFFDF9",
-              }}
+              className="w-full px-4 py-3 rounded-xl border border-[#7D1F2E]/20 font-sans-body text-sm outline-none bg-[#FFFDF9] focus:border-[#C9A84C]"
             >
               <option value="1">1 Person</option>
               <option value="2">2 Persons</option>
@@ -190,62 +101,30 @@ export default function RSVP() {
           </div>
 
           {/* Blessings Message */}
-          <div style={{ marginBottom: "1.8rem" }}>
-            <label
-              style={{
-                display: "block",
-                fontFamily: "'Cinzel', serif",
-                fontSize: "0.75rem",
-                letterSpacing: "0.15em",
-                color: "#7D1F2E",
-                marginBottom: "0.4rem",
-              }}
-            >
+          <div>
+            <label className="block font-cinzel text-xs tracking-wider text-[#7D1F2E] font-bold mb-1">
               MESSAGE OR BLESSINGS (OPTIONAL)
             </label>
             <textarea
               rows="3"
-              placeholder="Write your heartfelt wishes for the couple..."
+              placeholder="Write your heartfelt wishes for Anand &amp; Suman..."
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              style={{
-                width: "100%",
-                padding: "0.8rem 1rem",
-                borderRadius: "10px",
-                border: "1px solid rgba(125, 31, 46, 0.2)",
-                fontFamily: "'Montserrat', sans-serif",
-                fontSize: "0.9rem",
-                outline: "none",
-                background: "#FFFDF9",
-                resize: "vertical",
-              }}
+              className="w-full px-4 py-3 rounded-xl border border-[#7D1F2E]/20 font-sans-body text-sm outline-none bg-[#FFFDF9] focus:border-[#C9A84C] resize-vertical"
             />
+          </div>
+
+          {/* Contact Display */}
+          <div className="text-center py-1">
+            <span className="font-sans-body text-xs text-[#666]">
+              RSVP Contact: <strong className="text-[#7D1F2E] font-bold">+91 86191 89005</strong>
+            </span>
           </div>
 
           {/* Submit Button */}
           <button
             type="submit"
-            style={{
-              width: "100%",
-              padding: "1rem",
-              borderRadius: "30px",
-              background: "linear-gradient(135deg, #25D366, #128C7E)",
-              color: "#FFFFFF",
-              border: "none",
-              fontFamily: "'Cinzel', serif",
-              fontSize: "0.85rem",
-              fontWeight: 700,
-              letterSpacing: "0.15em",
-              cursor: "pointer",
-              boxShadow: "0 6px 20px rgba(37, 211, 102, 0.35)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: "8px",
-              transition: "transform 0.2s",
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.02)")}
-            onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+            className="w-full py-3.5 rounded-full bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white font-cinzel font-bold text-xs sm:text-sm tracking-widest shadow-lg hover:scale-102 active:scale-98 transition-transform cursor-pointer flex items-center justify-center gap-2"
           >
             <span>💬 SEND RSVP VIA WHATSAPP</span>
           </button>
