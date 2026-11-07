@@ -28,7 +28,7 @@ const eventsList = [
   {
     id: "baraat",
     number: "3",
-    name: "Baraat Prathan",
+    name: "Baraat Prasthan",
     hindiName: "बारात प्रस्थान",
     date: "Saturday, 14th Nov 2026",
     time: "7:30 PM",
@@ -46,7 +46,7 @@ const eventsList = [
     time: "11:00 AM",
     icon: "🍽️",
     venue: "145, Ashapurna Valley, Jhalamand, Jodhpur",
-    image: "https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/reception.jpg",
     description: "Grand celebration feast and warm gathering to welcome and bless the newlyweds Anand & Suman.",
   },
   {
@@ -58,7 +58,7 @@ const eventsList = [
     time: "4:00 PM",
     icon: "🪙",
     venue: "145, Ashapurna Valley, Jhalamand, Jodhpur",
-    image: "https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/reception.jpg",
     description: "Grand celebration feast and warm gathering to welcome and bless the newlyweds Anand & Suman.",
 }
 ];
