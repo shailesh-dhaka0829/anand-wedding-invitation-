@@ -87,7 +87,7 @@ export default function App() {
             {/* Circular Couple Portrait */}
             <div className="w-44 h-44 sm:w-52 sm:h-52 rounded-full border-4 border-[#D4AF37] p-1 bg-gradient-to-b from-[#D4AF37] via-[#B5965A] to-[#6E1F2E] shadow-[0_0_35px_rgba(212,175,55,0.4)] overflow-hidden shrink-0">
               <img
-                src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=600&q=80"
+                src="/images/cover_couple.jpg"
                 alt="Anand & Suman"
                 className="w-full h-full object-cover rounded-full"
               />

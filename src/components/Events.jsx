@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const eventsList = [
-  {
+    {
     id: "dhratpaan",
     number: "1",
     name: "Ghratpaan",
@@ -10,22 +10,22 @@ const eventsList = [
     time: "7:15 PM",
     icon: "🪔",
     venue: "145, Ashapurna Valley, Jhalamand, Jodhpur",
-    image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/ghratpaan.jpg",
     description: "The sacred pre-wedding ritual invoking ancestral blessings, prosperity, and joyous family beginnings.",
   },
-  {
+    {
     id: "bandoli",
     number: "2",
-    name: "Bandoli",
-    hindiName: "बिन्दोली",
+    name: "Bandoli & Sangeet",
+    hindiName: "बिन्दोली एवं संगीत",
     date: "Friday, 13th Nov 2026",
     time: "7:15 PM",
     icon: "🥁",
     venue: "145, Ashapurna Valley, Jhalamand, Jodhpur",
-    image: "https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=1200&q=80",
-    description: "Joyous musical night, dance procession, and celebrations with near and dear ones.",
+    image: "https://images.squarespace-cdn.com/content/v1/614d2b3f6bb36e4e7402ba67/53a008ef-32fb-43b2-ae30-6985ff9d5a87/The+couples+dance+at+a+Sangeet",
+    description: "Joyous musical night, couple dance, and celebrations with near and dear ones.",
   },
-  {
+     {
     id: "baraat",
     number: "3",
     name: "Baraat Prasthan",
@@ -34,10 +34,10 @@ const eventsList = [
     time: "7:30 PM",
     icon: "🐎",
     venue: "145, Ashapurna Valley, Jhalamand, Jodhpur",
-    image: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1200&q=80",
+    image: "https://i.pinimg.com/736x/0f/5c/a5/0f5ca5c1748a774be40b8adee004f19f.jpg",
     description: "The royal wedding procession accompanied by band, fanfare, and celebratory enthusiasm.",
   },
-  {
+    {
     id: "reception",
     number: "4",
     name: "Reception & Blessings",
@@ -49,7 +49,7 @@ const eventsList = [
     image: "/images/reception.jpg",
     description: "Grand celebration feast and warm gathering to welcome and bless the newlyweds Anand & Suman.",
   },
-  {
+   {
     id: "maayra",
     number: "5",
     name: "Maayra",
@@ -58,9 +58,9 @@ const eventsList = [
     time: "4:00 PM",
     icon: "🪙",
     venue: "145, Ashapurna Valley, Jhalamand, Jodhpur",
-    image: "/images/reception.jpg",
-    description: "Grand celebration feast and warm gathering to welcome and bless the newlyweds Anand & Suman.",
-}
+    image: "https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=1200&q=80",
+    description: "Traditional Maayra ritual celebrating family love and blessings.",
+  },
 ];
 
 export default function Events() {
